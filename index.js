@@ -1,6 +1,16 @@
 // prufrock.txt.json is the file created by parsing prufrock.txt with the word-list-maker.js utility
 var sampledWords = require('./prufrock.txt.json');
 
+/* overrideSampledWords
+ *
+ * Allows overriding of the specimen file for sampledWords with a json
+ * file created using word-list-maker.js
+ * ex: rhd.overrideSampledWords(require('./your_magical_words.txt.json'));
+ */
+exports.overrideSampledWords = function(newSampledWords) {
+	sampledWords = newSampledWords;
+}
+
 /* humanizeDigest
  *
  * Required: 
